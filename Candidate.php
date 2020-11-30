@@ -1,6 +1,5 @@
 <?php
 //Чтобы не вылезали варнинги при формировании json
-
 ini_set('display_errors','On');
 error_reporting('E_ALL');
 
@@ -168,7 +167,7 @@ class Candidate extends CandidateAbstract
 
         if ($json->rows[0]->elements[0]->status == "OK") {
             $result = $json->rows[0]->elements[0]->distance->text;
-            $result = ereg_replace("[^0-9,/.]", "", $result);
+            $result = preg_replace("[^0-9,/.]", "", $result);
         }
         else {
             $result = false;
