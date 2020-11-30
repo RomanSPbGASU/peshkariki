@@ -113,9 +113,9 @@ class Candidate extends CandidateAbstract
 	 */
 	public function connectToDatabases() {
         $host = 'localhost'; // адрес сервера
-        $database = 'blog'; // имя базы данных
+        $database = 'peshkariki'; // имя базы данных
         $user = 'root'; // имя пользователя
-        $password = 'iEhg3It3<K6s'; // пароль
+        $password = 'example'; // пароль
         $link = mysqli_connect($host, $user, $password, $database)
         or die("Ошибка " . mysqli_error($link));
 
