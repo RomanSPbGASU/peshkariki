@@ -1,0 +1,22 @@
+version: '3'
+services:
+  webserver:
+    build:
+      context: .
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+    environment:
+      XDEBUG_CONFIG: remote_host=host.docker.internal
+
+  mysqlserver:
+    image: mysql
+    ports:
+      - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: peshkariki
