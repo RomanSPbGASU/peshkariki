@@ -1,4 +1,3 @@
-
 /**
  * Осуществляет весь цикл работы с формой
  */
@@ -33,7 +32,7 @@ function validateClientForm() {
     let isValid = true;
 
     if (!document.getElementById("fio_form").value.length) {
-        document.getElementById("fio_error").innerText = "Empty";
+        document.getElementById("fio_error").innerText = "Поле не может быть пустым";
         isValid = false;
     }
 
@@ -43,7 +42,7 @@ function validateClientForm() {
     }
 
     if (!document.getElementById("address_form").value.length) {
-        document.getElementById("address_error").innerText = "Empty";
+        document.getElementById("address_error").innerText = "Поле не может быть пустым";
         isValid = false;
     }
 
@@ -70,7 +69,7 @@ function submitClientForm(address, phone) {
     xhr.open('GET', url, false);
     //Посылаем запрос
     xhr.send();
-    if (xhr.status != 200)
+    if (xhr.status !== 200)
     {
         document.getElementById('result').innerText = "Something wrong...";
     }
@@ -78,7 +77,7 @@ function submitClientForm(address, phone) {
     {
         var json_data = xhr.responseText;
         var data = JSON.parse(json_data);
-        if (data['error'] == 0) {
+        if (data['error'] === 0) {
             var resultString;
             var fio = document.getElementById("fio_form").value;
             var phone = data['phone'];
