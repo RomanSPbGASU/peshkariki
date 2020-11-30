@@ -1,6 +1,6 @@
 ﻿Тестовое задание для разработчика
 
-####Задача:
+### Задача:
 Пусть в г. Санкт-Петербург имеется 5 пунктов выдачи с заданными географическими координатами.
 
 |	|имя		|широта		    |долгота|
@@ -11,9 +11,11 @@
 |4	|Корусант	|59.9894		|30.2587|
 |5	|Мустафар	|59.8836		|30.3575|
 
+
 Требуется создать веб-сервис, который предлагает пользователю ввести его ФИО, телефон и адрес, 
 и по введенному адресу определяет ближайший пункт выдачи и расстояние до него.
 Пользователю выводится его имя, форматированный телефон и информация о пункте выдачи.
+
 ---
 Файлы в [архиве](test_peshkariki.zip):
 - [`Toolkit.php`](Toolkit.php) - вспомогательный класс, содержащий метод для форматирования номера телефона, 
@@ -42,9 +44,9 @@
 4. Расстояние выводится в километрах с округлением до <u>1 знака после запятой</u>.
 
 ---
-####Решение:
+### Решение:
 Все необходимые файлы добавлены в проект
-#####Установка через Docker
+#### Установка через Docker
 Запустите контейнер
 
     docker-compose up -d
@@ -58,7 +60,7 @@ translation for foreigners:
 
 Test task for the developer
 
-#### Problem:
+### The Problem:
 Let's assume that there are 5 pick-up points with the specified geographical coordinates in Saint Petersburg.
 
 |   | name    | latitude |longitude|
@@ -72,6 +74,7 @@ Let's assume that there are 5 pick-up points with the specified geographical coo
 You need to create a web service prompts the user to enter their full name, phone number, and address,
 and uses the entered address to determine the nearest pick-up point and the distance to it.
 The user is shown their name, formatted phone number, and information about the pick-up point.
+
 ---
 Files in [archive](test_peshkariki.zip):
 - [`Toolkit.php`](Toolkit.php) - an auxiliary class contains a method for formatting the phone number,
@@ -100,9 +103,9 @@ Requirements:
 4. The distance should be displayed in kilometers rounded to <u>1 decimal place</u>.
 
 ---
-####Solution:
+#### Solution:
 All necessary files added to the project
-#####Install with Docker
+##### Install with Docker
 Start the container
 
     docker-compose up -d
